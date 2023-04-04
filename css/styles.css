@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+
+*{
+    margin: 0px;
+}
+
+#bg_loader{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 4;
+    transition: opacity 1s ease-out;
+}
+
+#collective{
+    height: 150px;
+    width: 270px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #1eaea8;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 45%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: opacity 1s ease-out;
+  }
+
+  #reports {
+    color: #1eaea8;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 50px;
+    font-family: 'Heebo', sans-serif;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+#logo {
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    z-index: 2;
+  }
+
+#mapa {
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    top: 600px;
+    left: 40px;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#mapa:hover {
+    transform: scale(1.5);
+}
+
+  #screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  #powerbi {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+

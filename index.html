@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="bg_loader">
+        <img id="collective" src="images/collective.png" alt="">
+        <div id="loader"></div>
+        <p id="reports">Reports</p>
+    </div>
+    <img id="logo" src="images/bmw.png" alt="bmw-logo">
+    <a href="mapa.html"  target="_blank"><img id="mapa" src="/images/mapa.png" salt=""></a>
+    <div id="screen">
+        <iframe id="powerbi" title="TH_Analytics_Final.27.02.23" src="https://app.powerbi.com/view?r=eyJrIjoiM2MxZGQ5ZWEtYTJhZC00MzU1LWI3MjktNWY5YzVhODVhNjU5IiwidCI6IjMyYzY3YTRlLTIzZjMtNDFhZC1iNDYzLWE4MDdiZDFmMmM5YiIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+      </div>
+</body>
+</html>
+
+<script>
+    const powerbi = document.getElementById("powerbi");
+
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        powerbi.requestFullscreen();
+      } else {
+        document.exitFullscreen();
+      }
+    }
+
+    powerbi.addEventListener("dblclick", toggleFullScreen);
+
+
+    window.onload = function() {
+  setTimeout(function(){
+    document.getElementById('bg_loader').style.opacity = '0';
+    document.getElementById('loader').style.opacity = '0';
+    document.getElementById('screen').style.opacity = '1';
+    setTimeout(function(){
+      document.getElementById('bg_loader').style.display = 'none';
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('screen').style.display = 'block';
+    }, 1000);
+  }, 2600);
+
+};
+  </script>
